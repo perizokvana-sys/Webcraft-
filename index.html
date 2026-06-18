@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WebCraft</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="game-container"></div>
+    
+    <!-- Виртуальный джойстик -->
+    <div id="joystick-container" class="joystick-container">
+        <div id="joystick-base" class="joystick-base">
+            <div id="joystick-stick" class="joystick-stick"></div>
+        </div>
+    </div>
+    
+    <!-- Кнопки управления -->
+    <div id="controls-container" class="controls-container">
+        <button id="btn-jump" class="control-btn jump-btn">⬆️</button>
+        <button id="btn-destroy" class="control-btn destroy-btn">🔨</button>
+        <button id="btn-place" class="control-btn place-btn">📦</button>
+        <button id="btn-inventory" class="control-btn inventory-btn">🎒</button>
+    </div>
+    
+    <!-- Инвентарь -->
+    <div id="inventory-panel" class="inventory-panel hidden">
+        <div class="inventory-title">Инвентарь</div>
+        <div id="inventory-slots" class="inventory-slots">
+            <!-- Слоты будут созданы JS -->
+        </div>
+        <button id="btn-close-inventory" class="close-inventory-btn">✕</button>
+    </div>
+    
+    <!-- HUD -->
+    <div id="hud" class="hud">
+        <div id="crosshair" class="crosshair">+</div>
+        <div id="selected-block" class="selected-block">Трава</div>
+        <div id="coordinates" class="coordinates">X: 0 Y: 0 Z: 0</div>
+    </div>
+    
+    <!-- Three.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    
+    <!-- Скрипты проекта -->
+    <script src="world.js"></script>
+    <script src="player.js"></script>
+    <script src="inventory.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
